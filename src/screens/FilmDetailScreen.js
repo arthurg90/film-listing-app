@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native'
 
+import FilmDetail from '../components/FilmDetail'
+
 export default class FilmDetailScreen extends Component {
   static navigationOptions = (
     {navigation}) => {
@@ -12,10 +14,10 @@ export default class FilmDetailScreen extends Component {
   };
 
   render() {
-    const description = this.props.navigation.state.params.description;
+    const film = this.props.navigation.state.params;
     return (
       <View style={styles.container}>
-        <Text>{description}</Text>
+        <FilmDetail film={film} />
       </View>
     );
   }
@@ -24,7 +26,5 @@ export default class FilmDetailScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
   }
 });

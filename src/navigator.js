@@ -9,7 +9,7 @@ const isAndroid = (Platform.OS === 'android');  //flag to check if android platf
 const extraStyles = Platform.select({   //applies extra styles depending on which platform the app is being run on
   android: {
     marginTop: Constants.statusBarHeight
-  }
+  },
 });
 
 StatusBar.setBarStyle('light-content'); //adds white background for iOS status bar
